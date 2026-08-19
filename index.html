@@ -1,77 +1,94 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Werewolf - Punk's Not Dead</title>
-
+<title>Werewolf – Punk's Not Dead</title>
+<meta name="description" content="Werewolf – Viking Punk, Magyar Punk és saját zenék. Hallgasd meg a Werewolf dalait online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
-<!-- Villám effekt -->
 <div id="lightning"></div>
-
-<!-- Eső -->
 <div id="rain"></div>
-
-<!-- Köd -->
 <div class="fog fog1"></div>
 <div class="fog fog2"></div>
 
-<!-- Háttér videó -->
-<video autoplay muted loop playsinline id="background-video">
-    <source src="video/viking.mp4" type="video/mp4">
-</video>
-
 <header>
-
-<div class="logo">
-🐺 WEREWOLF
-</div>
-
-<nav>
-
-<a href="#home">Kezdőlap</a>
-<a href="#videos">Zenék</a>
-<a href="#videos">Videók</a>
-<a href="#lyrics">Dalszövegek</a>
-<a href="#gallery">Galéria</a>
-<a href="#about">Rólam</a>
-<a href="#contact">Kapcsolat</a>
-
-</nav>
-
+  <div class="logo">🐺 WEREWOLF</div>
+  <nav>
+    <a href="#home">Kezdőlap</a>
+    <a href="#videos">Zenék</a>
+    <a href="#videos">Videók</a>
+    <a href="#lyrics">Dalszövegek</a>
+    <a href="#gallery">Galéria</a>
+    <a href="#about">Rólam</a>
+    <a href="#contact">Kapcsolat</a>
+  </nav>
 </header>
 
 <section class="hero" id="home">
+  <h1>WEREWOLF</h1>
+  <h2>PUNK'S NOT DEAD</h2>
+  <p>Viking Punk • Magyar Punk • Saját Zenék</p>
+  <div class="buttons">
+    <a href="#videos">▶ Zenék lejátszása</a>
+    <a href="#contact">🎵 Spotify</a>
+  </div>
+</section>
 
-<h1>WEREWOLF</h1>
+<section class="music-section" id="videos">
+  <div class="section-title">
+    <span>⚔</span>
+    <h2>WEREWOLF – ZENÉK</h2>
+    <span>⚔</span>
+  </div>
+  <p class="music-intro">Az összes feltöltött Werewolf-dal egy helyen. Válassz egy számot, vagy használd a következő/előző gombot.</p>
 
-<h2>PUNK'S NOT DEAD</h2>
+  <div class="player-card">
+    <div class="now-playing">
+      <div class="wolf-mark">🐺</div>
+      <div>
+        <div class="small-label">MOST SZÓL</div>
+        <div id="now-title">Válassz egy zenét</div>
+      </div>
+    </div>
 
-<p>
-Viking Punk • Magyar Punk • Saját Zenék
-</p>
+    <audio id="audioPlayer" controls preload="metadata"></audio>
 
-<div class="buttons">
+    <div class="player-controls">
+      <button id="prevBtn" type="button">⏮ Előző</button>
+      <button id="playBtn" type="button">▶ Lejátszás</button>
+      <button id="nextBtn" type="button">Következő ⏭</button>
+    </div>
 
-<a href="#videos">▶ YouTube</a>
+    <div class="playlist-head">
+      <strong>LEJÁTSZÁSI LISTA</strong>
+      <span id="songCount"></span>
+    </div>
+    <div id="playlist" class="playlist"></div>
+  </div>
+</section>
 
-<a href="#contact">🎵 Spotify</a>
-
-</div>
-
+<section class="simple-section" id="lyrics">
+  <h2>DALSZÖVEGEK</h2>
+  <p>A dalszövegek részét később külön-külön fel tudjuk tölteni a zenékhez.</p>
+</section>
+<section class="simple-section" id="gallery">
+  <h2>GALÉRIA</h2>
+  <p>Ide kerülhetnek a Werewolf képei és borítói.</p>
+</section>
+<section class="simple-section" id="about">
+  <h2>RÓLAM</h2>
+  <p>Werewolf • Viking Punk • Magyar Punk • Saját zenék</p>
+</section>
+<section class="simple-section" id="contact">
+  <h2>KAPCSOLAT</h2>
+  <p>Ide később megadhatjuk a kapcsolattartási lehetőségeket és a közösségi oldalakat.</p>
 </section>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>
